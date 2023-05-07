@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+/**
+ * The type Product response.
+ */
 @Data
 @Builder
 @AllArgsConstructor

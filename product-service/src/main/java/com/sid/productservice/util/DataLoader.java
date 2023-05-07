@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+/**
+ * The type Data loader.
+ */
 @Component
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {

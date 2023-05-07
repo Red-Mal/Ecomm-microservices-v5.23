@@ -9,6 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 
+/**
+ * The type Product.
+ */
 @Document(value = "product")
 @AllArgsConstructor
 @NoArgsConstructor

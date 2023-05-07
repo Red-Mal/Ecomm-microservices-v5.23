@@ -8,6 +8,9 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * The type Order.
+ */
 @Entity
 @Table(name = "t_orders")
 @Getter

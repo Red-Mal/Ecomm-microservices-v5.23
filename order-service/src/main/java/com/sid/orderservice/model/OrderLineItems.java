@@ -8,6 +8,9 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+/**
+ * The type Order line items.
+ */
 @Entity
 @Table(name = "t_order_line_items")
 @Getter

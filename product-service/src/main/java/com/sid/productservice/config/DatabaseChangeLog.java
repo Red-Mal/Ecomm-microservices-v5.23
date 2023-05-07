@@ -9,9 +9,17 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Database change log.
+ */
 @ChangeLog
 public class DatabaseChangeLog {
 
+    /**
+     * Seed database.
+     *
+     * @param productRepository the product repository
+     */
     @ChangeSet(order = "001",id = "seedDatabase",author = "Red")
     public void seedDatabase(ProductRepository productRepository){
         List<Product> productList=new ArrayList<>();
