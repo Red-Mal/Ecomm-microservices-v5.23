@@ -43,12 +43,12 @@ To install and set up the ecommerce microservices project, follow these steps:
 1. Clone the repository:
 
   ```bash
-  git clone https://github.com/your-username/your-repo.git
+  git clone https://github.com/Red-Mal/Ecomm-microservices-v5.23.git
   ```
 2. Change to the project directory:
 
   ```bash
-  cd your-repo
+  cd Ecomm-microservices-v5.23
   ```
 3. Build the microservices using Maven:
 
