@@ -19,7 +19,7 @@ The ecommerce microservices project aims to provide a scalable and modular archi
 - **Discovery Server**: This service acts as a registry for all the microservices in the system. It enables service discovery and allows other services to locate and communicate with each other.
 
 - **API Gateway**: The API gateway serves as the entry point for external clients to access the ecommerce system. It routes incoming requests to the appropriate microservices, handles authentication, and performs load balancing.
-- 
+
 - **Inventory Service**: The inventory service manages the inventory of products in the ecommerce system. It provides functionality to add, update, and retrieve inventory information for different products.
 
 - **Order Service**: The order service handles the creation and management of orders placed by customers. It integrates with other services to ensure accurate inventory management and order fulfillment.
@@ -42,10 +42,9 @@ To install and set up the ecommerce microservices project, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   
-   ```
+  ```bash
+  git clone https://github.com/your-username/your-repo.git
+  ```
 2. Change to the project directory:
 
   ```bash
@@ -56,6 +55,11 @@ To install and set up the ecommerce microservices project, follow these steps:
   ```bash
   mvn clean install
   ```
+ 4. Start the microservices in the following order:
+
+- Start the discovery server (Eureka Server).
+- Start the inventory service, order service, product service, and API gateway.
+
 
 ## Usage
 Once the microservices are up and running, you can start using the ecommerce system. Here are some examples of how to interact with the services:
