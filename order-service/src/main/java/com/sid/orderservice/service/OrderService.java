@@ -24,21 +24,15 @@ import java.util.UUID;
 @Transactional
 @Slf4j
 public class OrderService {
-
     private final OrderRepository orderRepository;
-    private final WebClient webClient;
-
-
+    private final WebClient.Builder webClientBuilder;
     public void placeOrder(OrderRequest orderRequest){
         Order order=new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
-
        List<OrderLineItems> orderLineItems= orderRequest.getOrderLineItemsDtoList()
                 .stream()
                 .map(this::mapToDto)
                 .toList();
-
-
        order.setOrderLineItemsList(orderLineItems);
 
        List<String> skuCodes= order.getOrderLineItemsList()
@@ -47,10 +41,9 @@ public class OrderService {
                .toList();
 
 
-
         //Call Inventory Service, and place order if product is in stock
-        InventoryResponse[] inventoryResponseArray = webClient.get()
-                        .uri("http://localhost:8082/api/inventory",
+        InventoryResponse[] inventoryResponseArray = webClientBuilder.build().get()
+                        .uri("http://inventory-service/api/inventory",
                                 uriBuilder -> uriBuilder.queryParam("skuCode",skuCodes).build())
                                 .retrieve()
                                         .bodyToMono(InventoryResponse[].class)
@@ -58,7 +51,6 @@ public class OrderService {
 
         boolean allProductsInStock=Arrays.stream(inventoryResponseArray)
                 .allMatch((InventoryResponse::isInstock));
-
         /*if(!Boolean.TRUE.equals(allProductsInStock))
             throw new IllegalArgumentException("Product is not in Stock");
         orderRepository.save(order);*/
@@ -67,9 +59,6 @@ public class OrderService {
         }else{
             throw new IllegalArgumentException("Product is not in Stock");
         }
-
-
-
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
