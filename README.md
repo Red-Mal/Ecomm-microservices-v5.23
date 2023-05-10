@@ -69,7 +69,6 @@ Once the microservices are up and running, you can start using the ecommerce sys
 - Place orders using the order service API.
 - Retrieve product information using the product service API.
 
-Refer to the documentation of each microservice for detailed information on available endpoints and request formats.
 
 ## Features
 The ecommerce microservices project offers the following features:
