@@ -36,6 +36,8 @@ The ecommerce microservices project utilizes the following technologies and fram
 - API Gateway: Handles routing, authentication, and load balancing for external requests.
 - Maven: Build and dependency management tool.
 - Git: Version control system.
+- Resilience4j : is a lightweight fault tolerance library that provides a variety of fault tolerance and stability patterns to a web application(Circuit Breaker, Rate Limiter, Retry or Bulkhead).
+- Micrometer : provides a simple facade for the most popular tracer libraries (Distributed Tracing).
 
 ## Installation
 To install and set up the ecommerce microservices project, follow these steps:
