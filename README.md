@@ -33,7 +33,7 @@ The ecommerce microservices project utilizes the following technologies and fram
 - **Spring Boot:** Java-based framework for building microservices.
 - **Spring Cloud:** Provides tools and libraries for building cloud-native microservices.
 - **Eureka Server:** Service registry and discovery server for locating microservices.
-- **API Gateway:**** Handles routing, authentication, and load balancing for external requests.
+- **API Gateway:** Handles routing, authentication, and load balancing for external requests.
 - **Maven:** Build and dependency management tool.
 - **Git:** Version control system.
 - **Resilience4j:** is a lightweight fault tolerance library that provides a variety of fault tolerance and stability patterns to a web application(Circuit Breaker, Rate Limiter, Retry or Bulkhead).
