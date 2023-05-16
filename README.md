@@ -6,12 +6,16 @@ This repository contains a collection of microservices for an ecommerce applicat
 
 ## Table of Contents
 - [Overview](#overview)
+- [Architecture](#Architecture)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
+- 
+## Architecture
+![](../../../Users/redae/Downloads/elk logo+icons/EcommArchi-v1.png)
 
 ## Overview
 The ecommerce microservices project aims to provide a scalable and modular architecture for managing various aspects of an ecommerce system. The different microservices included in this project are:
