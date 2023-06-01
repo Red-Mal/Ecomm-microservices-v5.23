@@ -29,6 +29,7 @@
         <mongock.version>4.1.19</mongock.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2022.0.2</spring-cloud.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencyManagement>
@@ -73,6 +74,20 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <!-- Jib Plugin -->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <from>
+                        <image>eclipse-temurin:17.0.4.1_1-jre</image>
+                    </from>
+                    <to>
+                        <image>registry.hub.docker.com/redmal/${project.artifactId}</image>
+                    </to>
                 </configuration>
             </plugin>
         </plugins>
